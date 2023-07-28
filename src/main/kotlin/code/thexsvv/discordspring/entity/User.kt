@@ -9,8 +9,21 @@ import jakarta.persistence.Table
 class User {
 
     @Id
-    private val id: Long? = null;
-    private val name: String? = null;
-    private val level: Int? = null;
-    private val rank: Int? = null;
+    var id: Long? = null;
+    var name: String? = null;
+    var level: Int? = null;
+    var rank: Int? = null;
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other)
+            return true;
+        if (other !is User)
+            return false;
+
+        return id == other.id;
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode();
+    }
 }

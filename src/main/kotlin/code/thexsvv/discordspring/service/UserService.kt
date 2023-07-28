@@ -12,9 +12,13 @@ class UserService @Autowired constructor(private val repository: UserRepository)
     @Transactional
     fun getOrCreateUser(id: Long, name: String): User {
         val user = repository.findById(id);
-        if (user.isEmpty)
-            repository.registerUser(id, name);
+        return user.orElseGet {
+            val newUser = User();
+            newUser.id = id;
+            newUser.name = name;
 
-        return repository.findById(id).get();
-    }
+            repository.save(newUser);
+            newUser
+        }
+    };
 }

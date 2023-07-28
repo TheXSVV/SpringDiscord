@@ -27,5 +27,5 @@ interface UserRepository : JpaRepository<User, Long> {
 
     @Modifying
     @Query("INSERT INTO User (id, name, level, rank) VALUES (:id, :name, 0, 1)")
-    fun registerUser(id: Long?, name: String?)
+    fun registerUser(@Param("id") id: Long, @Param("name") name: String);
 }
