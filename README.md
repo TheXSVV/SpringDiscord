@@ -1,8 +1,7 @@
 # SpringDiscord - Discord bot made on Spring
-#### Discord bot made using Spring, JPA, Hibernate, JavaCord and ♥
-
+#### Template for your discord bot based on Spring
 <h4 align="center">
-    Template for your discord bot based on Spring
+    Discord bot made using Spring, JPA, Hibernate, JavaCord and ♥
     <br>
     Supports listeners, commands, databases, and localization
 </h4>
@@ -16,7 +15,7 @@
 
 > **Note**
 > 
-> Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA.
+> Click the <kbd>Use this template</kbd> button and clone it in IntelliJ IDEA or Another IDE
 
 ## Template structure
 ```
