@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Fetch Sources
         uses: actions/checkout@v3
+      - name: Run chmod to make gradlew executable
+        run: chmod +x ./gradlew
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
