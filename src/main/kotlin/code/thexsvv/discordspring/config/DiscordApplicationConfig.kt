@@ -6,6 +6,8 @@ import org.javacord.api.entity.intent.Intent
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.context.support.ReloadableResourceBundleMessageSource
+import java.nio.charset.StandardCharsets
 
 @Configuration
 class DiscordApplicationConfig {
@@ -20,5 +22,14 @@ class DiscordApplicationConfig {
             .addIntents(*Intent.values())
             .login()
             .join();
+    }
+
+    @Bean
+    fun messageSource(): ReloadableResourceBundleMessageSource {
+        val messageSource = ReloadableResourceBundleMessageSource();
+        messageSource.setBasename("classpath:messages");
+        messageSource.setDefaultEncoding(StandardCharsets.UTF_8.name());
+
+        return messageSource;
     }
 }

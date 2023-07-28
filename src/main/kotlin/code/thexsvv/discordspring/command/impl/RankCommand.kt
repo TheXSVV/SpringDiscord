@@ -6,6 +6,7 @@ import code.thexsvv.discordspring.service.UserService
 import org.javacord.api.entity.message.Message
 import org.javacord.api.entity.message.MessageBuilder
 import org.javacord.api.entity.user.User
+import org.javacord.api.entity.user.UserStatus
 import org.springframework.beans.factory.annotation.Autowired
 import java.awt.*
 import java.awt.geom.Ellipse2D
@@ -18,16 +19,18 @@ class RankCommand : BasicCommand("rank") {
     @Autowired
     private lateinit var userService: UserService;
 
-    override fun onExecute(label: String, message: Message, args: Array<String>) {
-        val image = execute(message.userAuthor.get());
+    override fun onExecute(label: String, message: Message, user: User, args: Array<String>) {
+        val image = execute(user);
 
         MessageBuilder()
+            .setContent(localization.localize("blabla.usage", user.name))
             .addAttachment(image, "card.png")
             .send(message.channel);
-        userService.getOrCreateUser(message.userAuthor.get().id, message.userAuthor.get().name);
+        userService.levelUp(user.id, user.name);
     }
 
     fun execute(user: User): BufferedImage {
+        val userEntity = userService.getOrCreateUser(user.id, user.name);
         val img = BufferedImage(460, 150, BufferedImage.TYPE_INT_ARGB);
         val graphics = img.createGraphics();
 
@@ -60,10 +63,19 @@ class RankCommand : BasicCommand("rank") {
         graphics.clip = null;
         drawCircleStroke(graphics, 15, 15, 118, Color.BLACK); // Avatar stroke
 
-        //drawCircleWithStroke(g, 70, 66, 15, Color.decode("#01AB1D"), Color.BLACK); // Status
+        val statusColor = when (user.status) {
+            UserStatus.DO_NOT_DISTURB -> Color.RED
+            UserStatus.IDLE -> Color.ORANGE
+            UserStatus.INVISIBLE -> Color.DARK_GRAY
+            UserStatus.OFFLINE -> Color.DARK_GRAY
+            else -> Color.GREEN;
+        }
+        graphics.color = statusColor;
+        graphics.fillArc(108, 108, 24, 24, 0, 360);
+
         drawString(graphics, user.name, 142, 25, 18, Color.WHITE);
-        drawString(graphics, "Rank: #2", 142, 55, 13, Color.WHITE);
-        drawString(graphics, "Level: 14", 142, 74, 13, Color.WHITE);
+        drawString(graphics, "Rank: ${userEntity.rank}", 142, 55, 13, Color.WHITE);
+        drawString(graphics, "Level: ${userEntity.level}/${userEntity.maxLevel}", 142, 74, 13, Color.WHITE);
         drawRectWithStroke(
             graphics,
             142,

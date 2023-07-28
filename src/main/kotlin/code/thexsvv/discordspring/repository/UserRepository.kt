@@ -26,6 +26,6 @@ interface UserRepository : JpaRepository<User, Long> {
     fun getUserRank(@Param("user") user: User): Int;
 
     @Modifying
-    @Query("INSERT INTO User (id, name, level, rank) VALUES (:id, :name, 0, 1)")
+    @Query("INSERT INTO User (id, name, level, maxLevel, rank) VALUES (:id, :name, 0, 10, 1)")
     fun registerUser(@Param("id") id: Long, @Param("name") name: String);
 }

@@ -8,7 +8,7 @@ import org.javacord.api.interaction.SlashCommand
 import org.javacord.api.interaction.SlashCommandInteraction
 
 @Command
-class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand {
+class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand() {
 
     override fun create(api: DiscordApi): SlashCommand {
         return SlashCommand.with(

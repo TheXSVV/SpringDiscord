@@ -12,6 +12,7 @@ class User {
     var id: Long? = null;
     var name: String? = null;
     var level: Int? = null;
+    var maxLevel: Int? = null;
     var rank: Int? = null;
 
     override fun equals(other: Any?): Boolean {
@@ -24,6 +25,6 @@ class User {
     }
 
     override fun hashCode(): Int {
-        return id.hashCode();
+        return id.hashCode() + name.hashCode();
     }
 }

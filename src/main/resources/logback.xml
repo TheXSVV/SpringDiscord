@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
+    <property name="LOG_PATTERN" value="[%d{HH:mm:ss}] [%thread/%level]: %msg%n"/>
+
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>[%d{HH:mm:ss}] [%thread/%level]: %msg%n</pattern>
+            <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
 

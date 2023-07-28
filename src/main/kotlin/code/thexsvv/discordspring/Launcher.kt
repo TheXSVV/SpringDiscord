@@ -6,11 +6,13 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @EnableConfigurationProperties
-class DiscordApplication {
+class DiscordApplication
 
-}
+object Launcher {
 
-fun main() {
-    Thread.currentThread().name = "app";
-    runApplication<DiscordApplication>();
+    @JvmStatic
+    fun main(args: Array<String>) {
+        Thread.currentThread().name = "app";
+        runApplication<DiscordApplication>();
+    }
 }

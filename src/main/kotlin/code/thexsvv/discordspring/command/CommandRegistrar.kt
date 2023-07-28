@@ -36,7 +36,7 @@ class CommandRegistrar(
                         val args = event.messageContent.split(" ");
                         val argsWithoutLabel = args.drop(1).toTypedArray();
 
-                        command.onExecute(args[0], event.message, argsWithoutLabel);
+                        command.onExecute(args[0], event.message, event.message.userAuthor.get(), argsWithoutLabel);
                     }
                 }
                 LOGGER.info("Registered basic command via listener: "+command.javaClass.simpleName);
