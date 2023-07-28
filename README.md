@@ -99,7 +99,7 @@ class TestMessageListener : MessageCreateListener {
 }
 ```
 
-### Features
+## Features
 * Basic chat commands
 * Slash commands
 * Listeners
