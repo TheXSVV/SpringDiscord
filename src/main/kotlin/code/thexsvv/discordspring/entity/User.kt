@@ -3,9 +3,11 @@ package code.thexsvv.discordspring.entity
 import jakarta.persistence.Entity
 import jakarta.persistence.Id
 import jakarta.persistence.Table
+import lombok.Getter
 
 @Entity
 @Table(name = "app_user")
+@Getter
 class User {
 
     @Id
