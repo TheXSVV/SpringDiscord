@@ -15,7 +15,7 @@ class User {
     var name: String? = null;
     var level: Int? = null;
     var maxLevel: Int? = null;
-    var rank: Int? = null;
+    var playerRank: Int? = null;
 
     override fun equals(other: Any?): Boolean {
         if (this === other)

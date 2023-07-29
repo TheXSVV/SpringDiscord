@@ -22,7 +22,7 @@ class UserRepositoryTest {
             this.id = 1L;
             this.name = userName;
             this.level = 0;
-            this.rank = 1;
+            this.playerRank = 1;
         }
         userRepository.save(user);
 

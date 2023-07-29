@@ -74,7 +74,7 @@ class RankCommand : BasicCommand("rank") {
         graphics.fillArc(108, 108, 24, 24, 0, 360);
 
         drawString(graphics, user.name, 142, 25, 18, Color.WHITE);
-        drawString(graphics, "Rank: ${userEntity.rank}", 142, 55, 13, Color.WHITE);
+        drawString(graphics, "Rank: ${userEntity.playerRank}", 142, 55, 13, Color.WHITE);
         drawString(graphics, "Level: ${userEntity.level}/${userEntity.maxLevel}", 142, 74, 13, Color.WHITE);
         drawRectWithStroke(
             graphics,

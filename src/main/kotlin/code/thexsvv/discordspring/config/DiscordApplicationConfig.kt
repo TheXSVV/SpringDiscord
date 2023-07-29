@@ -17,6 +17,7 @@ class DiscordApplicationConfig {
 
     @Bean
     fun bot(): DiscordApi {
+        println(token);
         return DiscordApiBuilder()
             .setToken(token)
             .setAllIntents()
