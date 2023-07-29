@@ -67,6 +67,23 @@ To create a basic chat command you need annotate your class with @Command and ex
 Example:
 ```kotlin
 @Command
+class TestBasicCommand : code.thexsvv.discordspring.command.types.BasicCommand("ping") {
+
+    override fun onExecute(label: String, message: Message, user: User, args: Array<String>) {
+        MessageBuilder()
+            .setContent("Pong!")
+            .send(message.channel);
+        // or
+        message.channel.sendMessage("Pong!");
+    }
+}
+```
+
+### Slash command
+To create a slash command you need to annotate your class with @Command and extend it with SlashCommand
+Example:
+```kotlin
+@Command
 class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand() {
 
     override fun create(api: DiscordApi): SlashCommand {
@@ -79,23 +96,6 @@ class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand()
         slashCommand.createImmediateResponder()
                 .setContent("Pong!")
                 .respond();
-    }
-}
-```
-
-### Slash command
-To create a slash command you need to annotate your class with @Command and extend it with SlashCommand
-Example:
-```kotlin
-@Command
-class TestBasicCommand : code.thexsvv.discordspring.command.types.BasicCommand("ping") {
-
-    override fun onExecute(label: String, message: Message, user: User, args: Array<String>) {
-        MessageBuilder()
-            .setContent("Pong!")
-            .send(message.channel);
-        // or
-        message.channel.sendMessage("Pong!");
     }
 }
 ```
