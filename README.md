@@ -65,7 +65,7 @@ class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand()
 }
 ```
 
-##№ Slash command
+### Slash command
 To create a slash command you need to annotate your class with @Command and extend it with SlashCommand
 Example:
 ```kotlin
@@ -82,7 +82,7 @@ class TestBasicCommand : code.thexsvv.discordspring.command.types.BasicCommand("
 }
 ```
 
-#### All command are registered automatically, because @Command is @Component and CommandRegistrar checks all beans in package
+All command are registered automatically, because @Command is @Component and CommandRegistrar checks all beans in package
 
 
 ## Adding listener
