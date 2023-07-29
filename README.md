@@ -112,7 +112,5 @@ class TestMessageListener : MessageCreateListener {
 * [Slash commands](https://github.com/TheXSVV/SpringDiscord/tree/master#slash-command)
 * [Listeners](https://github.com/TheXSVV/SpringDiscord/tree/master#adding-listener)
 
-[![Stargazers repo roster for @USERNAME/REPO_NAME](https://reporoster.com/stars/TheXSVV/SpringDiscord)](https://github.com/TheXSVV/SpringDiscord/stargazers)
-
 ## License
 SpringDiscord is licensed under the [GPL-3.0 license](https://github.com/TheXSVV/SpringDiscord/blob/master/LICENSE)
