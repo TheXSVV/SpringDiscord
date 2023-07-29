@@ -4,6 +4,7 @@
     Discord bot made using Spring, JPA, Hibernate, JavaCord and ♥
     <br>
     Supports listeners, commands, databases, and localization
+    <br>
 </h4>
 
 <div align="center">
