@@ -36,6 +36,7 @@
 │   └── test
 │       ├── kotlin/         Kotlin test sources
 ├── .gitignore              Git ignoring rules
+├── DockerFile              Docker file
 ├── build.gradle            Gradle configuration
 ├── gradle.properties       Gradle configuration properties
 ├── README.md               README file
@@ -45,6 +46,10 @@
 > **Note**
 > 
 > To use Java in your plugin, add `java` plugin to build.gradle and create the `/src/main/java` directory
+
+## Prerequisites
+Make sure you have the following tools installed:
+* **Docker** - [Download and install Docker](https://www.docker.com/get-started/)
 
 ## Requirements
 Find the `application.properties` in `resources` folder and change following properties:
@@ -111,6 +116,9 @@ class TestMessageListener : MessageCreateListener {
 * [Basic chat commands](https://github.com/TheXSVV/SpringDiscord/tree/master#basic-chat-command)
 * [Slash commands](https://github.com/TheXSVV/SpringDiscord/tree/master#slash-command)
 * [Listeners](https://github.com/TheXSVV/SpringDiscord/tree/master#adding-listener)
+
+## Running app
+Go to `DockerFile` in project root and click on the left run button, when select `New Run Configuration`. In `Configuration Settings` add  `Run Gradle Task SpringDiscord:test` and `Run Gradle Task SpringDiscord:bootJar` to `Before launch` section. Now you can run your Docker container 
 
 ## License
 SpringDiscord is licensed under the [GPL-3.0 license](https://github.com/TheXSVV/SpringDiscord/blob/master/LICENSE)
