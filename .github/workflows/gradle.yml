@@ -4,6 +4,9 @@ on:
   push:
     branches: [ master ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build
@@ -17,7 +20,7 @@ jobs:
           distribution: zulu
           java-version: 17
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: build 
 
@@ -34,7 +37,7 @@ jobs:
           distribution: zulu
           java-version: 17
       - name: Run Tests
-        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+        uses: gradle/gradle-build-action@v2
         with:
           arguments: test
       - name: Collect Tests Result
