@@ -9,8 +9,15 @@
 <div align="center">
     <a href="https://kotlinlang.org">
         <img alt="Kotlin" src="https://img.shields.io/badge/Language-Kotlin-7f52ff">
+    </a>
+    <a href="https://spring.io">
         <img alt="Eco System" src="https://img.shields.io/badge/Eco_System-Spring-green?logo=spring">
+    </a>
+    <a href="https://app.codacy.com/gh/TheXSVV/SpringDiscord/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade">
         <img alt="Codacy Review" src="https://app.codacy.com/project/badge/Grade/6e9e4f765d92440ba04345e75855f4c9">
+    </a>
+    <a href="https://github.com/adoptium/temurin17-binaries/releases/tag/jdk-17.0.8%2B7">
+        <img alt="JDK" src="https://img.shields.io/badge/JDK-Temurin_17-orange">
     </a>
 </div>
 
@@ -22,8 +29,6 @@
 ```
 .
 ├── build/                  Output build directory
-├── gradle
-│   ├── wrapper/            Gradle Wrapper
 ├── src                     Template sources
 │   ├── main
 │   │   ├── kotlin/         Kotlin sources
@@ -33,8 +38,6 @@
 ├── .gitignore              Git ignoring rules
 ├── build.gradle            Gradle configuration
 ├── gradle.properties       Gradle configuration properties
-├── gradlew                 *nix Gradle Wrapper script
-├── gradlew.bat             Windows Gradle Wrapper script
 ├── README.md               README file
 └── settings.gradle         Gradle project settings
 ```
@@ -42,6 +45,11 @@
 > **Note**
 > 
 > To use Java in your plugin, add `java` plugin to build.gradle and create the `/src/main/java` directory
+
+## Requirements
+Find the `application.properties` in `resources` folder and change following properties:
+* **token** - With your discord bot token, you can generate it in [Discord Developer Portal](https://discord.com/developers/applications)
+* **prefix** - With your bot prefix for [Basic Commands](https://github.com/TheXSVV/SpringDiscord/tree/master#basic-chat-command)
 
 ## Adding command
 ### Basic chat command
@@ -100,6 +108,11 @@ class TestMessageListener : MessageCreateListener {
 ```
 
 ## Features
-* Basic chat commands
-* Slash commands
-* Listeners
+* [Basic chat commands](https://github.com/TheXSVV/SpringDiscord/tree/master#basic-chat-command)
+* [Slash commands](https://github.com/TheXSVV/SpringDiscord/tree/master#slash-command)
+* [Listeners](https://github.com/TheXSVV/SpringDiscord/tree/master#adding-listener)
+
+[![Stargazers repo roster for @USERNAME/REPO_NAME](https://reporoster.com/stars/TheXSVV/SpringDiscord)](https://github.com/TheXSVV/SpringDiscord/stargazers)
+
+## License
+SpringDiscord is licensed under the [GPL-3.0 license](https://github.com/TheXSVV/SpringDiscord/blob/master/LICENSE)
