@@ -1,10 +1,11 @@
 # SpringDiscord - Discord bot made on Spring
 #### Template for your discord bot based on Spring
+<img alt="banner" src="https://repository-images.githubusercontent.com/672043058/5e97f583-cb1e-42bc-b721-049d105f6590">
+
 <h4 align="center">
     Discord bot made using Spring, JPA, Hibernate, JavaCord and ♥
     <br>
     Supports listeners, commands, databases, and localization
-    <br>
 </h4>
 
 <div align="center">
