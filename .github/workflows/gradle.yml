@@ -23,10 +23,6 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: bootJar
-      - name: Build and push Docker Image
-        uses: docker/build-push-action@v4.1.1
-        with:
-          file: Dockerfile
 
   test:
     name: Test
