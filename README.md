@@ -65,7 +65,7 @@ class TestSlashCommand : code.thexsvv.discordspring.command.types.SlashCommand()
 }
 ```
 
-## Slash command
+##№ Slash command
 To create a slash command you need to annotate your class with @Command and extend it with SlashCommand
 Example:
 ```kotlin
