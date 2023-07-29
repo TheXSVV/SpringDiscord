@@ -16,6 +16,9 @@
     <a href="https://app.codacy.com/gh/TheXSVV/SpringDiscord/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade">
         <img alt="Codacy Review" src="https://app.codacy.com/project/badge/Grade/6e9e4f765d92440ba04345e75855f4c9">
     </a>
+    <a href="https://github.com/TheXSVV/SpringDiscord/actions">
+        <img alt="Github Workflow Status" src="https://img.shields.io/github/actions/workflow/status/TheXSVV/SpringDiscord/gradle.yml">
+    </a>
     <a href="https://github.com/adoptium/temurin17-binaries/releases/tag/jdk-17.0.8%2B7">
         <img alt="JDK" src="https://img.shields.io/badge/JDK-Temurin_17-orange">
     </a>
@@ -118,7 +121,7 @@ class TestMessageListener : MessageCreateListener {
 * [Listeners](https://github.com/TheXSVV/SpringDiscord/tree/master#adding-listener)
 
 ## Running app
-Go to `DockerFile` in project root and click on the left run button, when select `New Run Configuration`. In `Configuration Settings` add  `Run Gradle Task SpringDiscord:test` and `Run Gradle Task SpringDiscord:bootJar` to `Before launch` section. Now you can run your Docker container 
+Go to `Dockerfile` in project root and click on the left run button, when select `New Run Configuration`. In `Configuration Settings` add  `Run Gradle Task SpringDiscord:test` and `Run Gradle Task SpringDiscord:bootJar` to `Before launch` section. Now you can run your Docker container 
 
 ## License
 SpringDiscord is licensed under the [GPL-3.0 license](https://github.com/TheXSVV/SpringDiscord/blob/master/LICENSE)
