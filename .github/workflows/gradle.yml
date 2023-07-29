@@ -26,7 +26,7 @@ jobs:
       - name: Build and push Docker Image
         uses: docker/build-push-action@v4.1.1
         with:
-          file: DockerFile
+          file: Dockerfile
 
   test:
     name: Test
